@@ -1,7 +1,6 @@
-import styles from "../ui/dashboard/dashboard.module.css";
-import Card from "../ui/dashboard/card/card";
-import Transactions from "../ui/dashboard/transactions/transactions";
-import Chart from "../ui/dashboard/chart/chart";
+import Card from "@/components/ui/dashboard/card/card";
+import Transactions from "@/components/ui/dashboard/transactions/transactions";
+import Chart from "@/components/ui/dashboard/chart/chart";
 import { MdSupervisedUserCircle, MdTrendingUp, MdAttachMoney } from "react-icons/md";
 const cardData = [
     {
@@ -25,9 +24,9 @@ const cardData = [
 ];
 const Dashboard =() =>{
     return(
-        <div className={styles.wrapper}>
-            <div className={styles.main}>
-                <div className={styles.cards}>
+        <div className="flex gap-5 mt-5">
+            <div  className="flex-[2] flex flex-col gap-5">
+                <div className="flex justify-between gap-5">
                     {cardData.map((data, index) => (
                     <Card 
                     key={index}
